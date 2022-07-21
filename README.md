@@ -7,8 +7,8 @@
 `X`: a non-empty numeric vector of group indicators, encoded as 0 or 1 <br>
 `observed.time`: a non-empty numeric vector of data <br>
 `delta`: the status indicator. Typically, 0: censored, 1: died <br>
-`t.star`: the specified cut-point <br>
-`alpha`: <br>
+`t.star`: the specified cut point <br>
+`alpha`: default 0.05 <br>
 
 #### Value
 A list containing the following components <br>
