@@ -54,6 +54,9 @@ res.tau.process_func(X = cancer$group,
                      observed.time = cancer$time,
                      delta = cancer$censor,
                      t.star = quantile(cancer$time, seq(0, 1, by = 0.1)))
+
+[1]  0.000000000 -0.059178744  0.042874396  0.001811594  0.024120606  0.105456868  0.125783386  0.114345016  0.131681805  0.145064589
+[11]  0.145064589
 ```
 ![github_example_bladder](https://user-images.githubusercontent.com/9900943/180813073-e3430a0a-17a6-40ca-91a0-8c6354d7fb84.png)
 ## Remark
