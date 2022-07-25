@@ -14,4 +14,4 @@
 A list containing the following components <br>
 `tau.hat`: the estimated value of &tau;<sub>b</sub> <br>
 `var.est`: the variance of the estimator of &tau;<sub>b</sub><br>
-`ci`: the (1-&alpha)*100% confidence interval of &tau;<sub>b</sub><br>
+`ci`: the (1-alpha)*100% confidence interval of &tau;<sub>b</sub><br>
