@@ -46,7 +46,7 @@ This function wrap the procedure to calculate the local Kendall's &tau; on the s
 `t.star`: the vector of specified time points <br>
 
 #### Value
-It returns a vector of the local Kendall's &tau; on the specified time points. Furthermore, it automatically draw a plot, which left hand side is the Kaplan-Meier curves of the controal and treatment groups and the right hand side is the line plot of the proposed tau process. 
+It returns a vector of the local Kendall's &tau; on the specified time points. Furthermore, it automatically draws a plot, which left hand side is the Kaplan-Meier curves of the controal and treatment groups and the right hand side is the line plot of the proposed tau process. 
 
 #### Example
 ```
