@@ -4,8 +4,8 @@
 This function calculates the estimated local Kendall's tau process, between a binary variable and a continuous variable subject to right censoring, up to a specified time point. Given a confidence level, this function produces the pointwise confidence interval of the local Kendall’s tau process evaluated at the specified time. The methods were proposed by Tai, Wang and Wells. <br>
 
 #### Arguments
-`X`: a non-empty numeric vector of group indicators, encoded as 0 or 1 <br>
-`observed.time`: a non-empty numeric vector of observed failure times <br>
+`X`: a non-empty numeric vector of group indicators, coded as 0 or 1 <br>
+`observed.time`: a non-empty numeric vector of observed times <br>
 `delta`: the censoring indicator coded as 0 if censored; as 1 if failed <br>
 `t.star`: the specified time point <br>
 `alpha`: type I error, default 0.05 <br>
@@ -17,7 +17,7 @@ A list containing the following components <br>
 `ci`: the (1-alpha)*100% confidence interval of the local Kendall’s &tau;<br>
 
 #### Example
-The dataset is obtained from Pagano and Gauvreau (2000: exercise 9, page 512). There were 86 patients who received surgery to remove tumors. After the surgery, 48 patients were assigned to the placebo treatment (Group 0) and 38 patients were assigned to chemotherapy (Group 1). The variable under comparison is the time to first recurrence of tumor. The estimated local Kendall’s is plotted up to `t.star` = 59 (months). <br>
+The dataset was obtained from Pagano and Gauvreau (2000: exercise 9, page 512). There were 86 patients who received surgery to remove tumors. After the surgery, 48 patients were assigned to the placebo treatment (Group 0) and 38 patients were assigned to chemotherapy (Group 1). The variable under comparison is the time to first recurrence of tumor. The estimated local Kendall’s is plotted up to `t.star` = 59 (months). <br>
 
 ```
 res.tau.hat_func(X = cancer$group,
@@ -37,16 +37,16 @@ $ci
 
 
 ### res.tau.process_func()
-This function wrap the procedure to calculate the local Kendall's &tau; on the specified time points. 
+This function wraps the procedure to calculate the local Kendall's &tau; process at the specified time points. 
 
 #### Arguments
-`X`: a non-empty numeric vector of group indicators, encoded as 0 or 1 <br>
-`observed.time`: a non-empty numeric vector of observed failure times <br>
+`X`: a non-empty numeric vector of group indicators, coded as 0 or 1 <br>
+`observed.time`: a non-empty numeric vector of observed times <br>
 `delta`: the censoring indicator coded as 0 if censored; as 1 if failed <br>
 `t.star`: the vector of specified time points <br>
 
 #### Value
-It returns a vector of the local Kendall's &tau; on the specified time points. Furthermore, it automatically draws a plot, which left hand side is the Kaplan-Meier curves of the controal and treatment groups and the right hand side is the line plot of the proposed tau process. 
+It returns a vector of the estimated local Kendall's &tau; process at the specified time points. Furthermore, it automatically draws two plots, where the two Kaplan-Meier curves are on the left and the estimated tau process is on the right. 
 
 #### Example
 ```
