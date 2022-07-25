@@ -35,5 +35,19 @@ plot(time.knot, tau.process, type = "b")
 ```
 ![github_example_kidney](https://user-images.githubusercontent.com/9900943/180728285-496d57d8-044e-4fd1-aca3-5c808185bd39.png)
 
+### res.tau.process_func()
+This function wrap the procedure to calculate the local Kendall's &tau; on th given vector of specified time points. 
+
+#### Arguments
+`X`: a non-empty numeric vector of group indicators, encoded as 0 or 1 <br>
+`observed.time`: a non-empty numeric vector of observed failure times <br>
+`delta`: the censoring indicator coded as 0 if censored; as 1 if failed <br>
+`t.star`: the specified time point <br>
+
+#### Value
+The left hand side of the plot is the Kaplan-Meier curves of the controal and treatment groups. The right hand side is the line plot of the proposed tau process. 
+
+#### Example
+
 ## Remark
 The dependency packages include `survival`.
