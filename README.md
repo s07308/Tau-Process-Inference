@@ -55,5 +55,6 @@ res.tau.process_func(X = cancer$group,
                      delta = cancer$censor,
                      t.star = quantile(cancer$time, seq(0, 1, by = 0.1)))
 ```
+![github_example_bladder](https://user-images.githubusercontent.com/9900943/180813073-e3430a0a-17a6-40ca-91a0-8c6354d7fb84.png)
 ## Remark
 The dependency packages include `survival`.
