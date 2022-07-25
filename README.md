@@ -37,7 +37,7 @@ $ci
 
 
 ### res.tau.process_func()
-This function wrap the procedure to calculate the local Kendall's &tau; on th given vector of specified time points. 
+This function wrap the procedure to calculate the local Kendall's &tau; on the specified time points. 
 
 #### Arguments
 `X`: a non-empty numeric vector of group indicators, encoded as 0 or 1 <br>
@@ -46,7 +46,7 @@ This function wrap the procedure to calculate the local Kendall's &tau; on th gi
 `t.star`: the vector of specified time points <br>
 
 #### Value
-The left hand side of the plot is the Kaplan-Meier curves of the controal and treatment groups. The right hand side is the line plot of the proposed tau process. 
+It returns a vector of the local Kendall's &tau; on the specified time points. Furthermore, it automatically draw a plot, which left hand side is the Kaplan-Meier curves of the controal and treatment groups and the right hand side is the line plot of the proposed tau process. 
 
 #### Example
 ```
