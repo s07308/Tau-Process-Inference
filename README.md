@@ -1,6 +1,6 @@
 # Tau-Process-Inference
 
-### re.tau.hat_func()
+### res.tau.hat_func()
 
 
 #### Arguments
