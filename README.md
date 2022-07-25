@@ -5,16 +5,16 @@ This function calculates the estimated local Kendall's tau process, between a bi
 
 #### Arguments
 `X`: a non-empty numeric vector of group indicators, encoded as 0 or 1 <br>
-`observed.time`: a non-empty numeric vector of data <br>
-`delta`: the status indicator. Typically, 0: censored, 1: failed <br>
-`t.star`: the specified cut point <br>
+`observed.time`: a non-empty numeric vector of observed failure times <br>
+`delta`: the censoring indicator coded as 0 if censored; as 1 if failed <br>
+`t.star`: the specified time point <br>
 `alpha`: type I error, default 0.05 <br>
 
 #### Value
 A list containing the following components <br>
-`tau.hat`: the estimated value of &tau;<sub>b</sub> <br>
-`var.est`: the variance of the estimator of &tau;<sub>b</sub><br>
-`ci`: the (1-alpha)*100% confidence interval of &tau;<sub>b</sub><br>
+`tau.hat`: the estimated value of the local Kendall’s &tau; process up to `t.star` <br>
+`var.est`:  the variance of the local Kendall’s &tau;<br>
+`ci`: the (1-alpha)*100% confidence interval of the local Kendall’s &tau;<br>
 
 #### Example
 The dataset is obtained from the book "Survival Analysis Techniques for Censored and Truncated Data" (Klein, John P., Moeschberger, Melvin L., 2003). It recoreded the time to infection for patients receiving Kidney Dialysis. <br>
