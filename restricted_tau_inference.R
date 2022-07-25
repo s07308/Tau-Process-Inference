@@ -1,4 +1,4 @@
-restricted.tau.hat_func <- function(X, observed.time, delta, t.star, alpha = 0.05) {
+res.tau.hat_func <- function(X, observed.time, delta, t.star, alpha = 0.05) {
   N0 <- sum(X == 0)
   N1 <- sum(X == 1)
   
