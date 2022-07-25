@@ -1,3 +1,19 @@
+res.tau.process_func <- function(X, observed.time, delta, t.star) {
+  tau.process <- numeric(length = length(t.star))
+  
+  for(k in seq_along(t.star)) {
+    tau.process[k] <- res.tau.hat.est(X, observed.time, delta, t.star[k])
+  }
+  
+  km.fit <- survfit(Surv(observed.time, delta) ~ X)
+  
+  par(mfrow = c(1, 2))
+  plot(km.fit, lty = c(2, 1), main = "Kaplan-Meier Curves")
+  legend("topright", legend = c("control", "treatment"), lty = c(2, 1))
+  plot(t.star, tau.process, type = "b", main = "Tau process")
+  abline(a = 0, b = 0, lty = 3)
+}
+
 res.tau.hat_func <- function(X, observed.time, delta, t.star, alpha = 0.05) {
   N0 <- sum(X == 0)
   N1 <- sum(X == 1)
