@@ -30,7 +30,7 @@ This function wrap the procedure to calculate the local Kendall's &tau; on th gi
 `X`: a non-empty numeric vector of group indicators, encoded as 0 or 1 <br>
 `observed.time`: a non-empty numeric vector of observed failure times <br>
 `delta`: the censoring indicator coded as 0 if censored; as 1 if failed <br>
-`t.star`: the specified time point <br>
+`t.star`: the vector of specified time points <br>
 
 #### Value
 The left hand side of the plot is the Kaplan-Meier curves of the controal and treatment groups. The right hand side is the line plot of the proposed tau process. 
