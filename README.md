@@ -50,7 +50,10 @@ The left hand side of the plot is the Kaplan-Meier curves of the controal and tr
 
 #### Example
 ```
-
+res.tau.process_func(X = cancer$group,
+                     observed.time = cancer$time,
+                     delta = cancer$censor,
+                     t.star = quantile(cancer$time, seq(0, 1, by = 0.1)))
 ```
 ## Remark
 The dependency packages include `survival`.
