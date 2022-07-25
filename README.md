@@ -1,7 +1,7 @@
 # Tau-Process-Inference
 
 ### res.tau.hat_func()
-This function calculate the estimate of tau and confidence interval given the region of interest with right-censored data. <br>
+This function calculates the estimated local Kendall's process, between a binary variable and a continuous variable subject to right censoring, up to a specified time point. Given a confidence level, this function produces the pointwise confidence interval of the local Kendall’s tau process evaluated at the specified time. The methods were proposed by Tai, Wang and Wells. <br>
 
 #### Arguments
 `X`: a non-empty numeric vector of group indicators, encoded as 0 or 1 <br>
