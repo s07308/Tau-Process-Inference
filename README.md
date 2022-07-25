@@ -37,7 +37,7 @@ $ci
 
 
 ### res.tau.process_func()
-This function wraps the procedure to calculate the local Kendall's &tau; process at the specified time points. 
+This function wraps the procedure to calculate the local Kendall's &tau; process at the specified time point. 
 
 #### Arguments
 `X`: a non-empty numeric vector of group indicators, coded as 0 or 1 <br>
