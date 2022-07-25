@@ -15,3 +15,24 @@ A list containing the following components <br>
 `tau.hat`: the estimated value of &tau;<sub>b</sub> <br>
 `var.est`: the variance of the estimator of &tau;<sub>b</sub><br>
 `ci`: the (1-alpha)*100% confidence interval of &tau;<sub>b</sub><br>
+
+#### Example
+The dataset is obtained from the book "Survival Analysis Techniques for Censored and Truncated Data" (Klein, John P., Moeschberger, Melvin L., 2003). It recoreded the time to infection for patients receiving Kidney Dialysis. <br>
+
+```
+time.knot <- quantile(KD$time, seq(0, 1, by = 0.1))
+tau.process <- numeric(length = length(time.knot))
+
+for(k in seq_along(time.knot)) {
+  tau.process.fit <- res.tau.hat_func(X = KD$treatment,
+                                      observed.time = KD$time,
+                                      delta = KD$delta,
+                                      t.star = time.knot[k])
+  tau.process[k] <- tau.process.fit$tau.hat
+}
+
+plot(time.knot, tau.process, type = "b")
+```
+
+## Remark
+The dependency packages include `survival`.
