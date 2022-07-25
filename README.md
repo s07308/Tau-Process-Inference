@@ -20,7 +20,18 @@ A list containing the following components <br>
 The dataset is obtained from Pagano and Gauvreau (2000: exercise 9, page 512). There were 86 patients who received surgery to remove tumors. After the surgery, 48 patients were assigned to the placebo treatment (Group 0) and 38 patients were assigned to chemotherapy (Group 1). The variable under comparison is the time to first recurrence of tumor. The estimated local Kendall’s is plotted up to `t.star` = 59 (months). <br>
 
 ```
+res.tau.hat_func(X = cancer$group,
+                 observed.time = cancer$time,
+                 delta = cancer$censor,
+                 t.star = 30)
+$tau.hat
+[1] 0.1316818
 
+$var.est
+[1] 0.01682179
+
+$ci
+[1] -0.1225232  0.3858868
 ```
 
 ### res.tau.process_func()
