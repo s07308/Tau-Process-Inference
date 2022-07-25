@@ -24,6 +24,7 @@ res.tau.hat_func(X = cancer$group,
                  observed.time = cancer$time,
                  delta = cancer$censor,
                  t.star = 30)
+```
 $tau.hat
 [1] 0.1316818
 
@@ -32,7 +33,6 @@ $var.est
 
 $ci
 [1] -0.1225232  0.3858868
-```
 
 ### res.tau.process_func()
 This function wrap the procedure to calculate the local Kendall's &tau; on th given vector of specified time points. 
