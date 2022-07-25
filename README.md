@@ -33,6 +33,7 @@ for(k in seq_along(time.knot)) {
 
 plot(time.knot, tau.process, type = "b")
 ```
+![github_example_kidney](https://user-images.githubusercontent.com/9900943/180728285-496d57d8-044e-4fd1-aca3-5c808185bd39.png)
 
 ## Remark
 The dependency packages include `survival`.
