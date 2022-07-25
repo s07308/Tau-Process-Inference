@@ -1,7 +1,7 @@
 # Tau-Process-Inference
 
 ### res.tau.hat_func()
-
+This function calculate the estimate of tau and confidence interval given the region of interest with right-censored data. <br>
 
 #### Arguments
 `X`: a non-empty numeric vector of group indicators, encoded as 0 or 1 <br>
