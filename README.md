@@ -15,6 +15,7 @@ A list containing the following components <br>
 `tau.hat`: the estimated value of the local Kendall’s &tau; process up to `t.star` <br>
 `var.est`:  the variance of the local Kendall’s &tau;<br>
 `ci`: the (1-alpha)*100% confidence interval of the local Kendall’s &tau;<br>
+`prop.compared`: the proportion of the domain of failure times compared up to the specified time point <br>
 
 #### Example
 The dataset was obtained from Pagano and Gauvreau (2000: exercise 9, page 512). There were 86 patients who received surgery to remove tumors. After the surgery, 48 patients were assigned to the placebo treatment (Group 0) and 38 patients were assigned to chemotherapy (Group 1). The variable under comparison is the time to first recurrence of tumor. The estimated local Kendall’s is plotted up to `t.star` = 59 (months). <br>
