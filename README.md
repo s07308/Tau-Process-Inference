@@ -65,3 +65,6 @@ res.tau.process_func(X = cancer$group,
 ![github_example_bladder](https://user-images.githubusercontent.com/9900943/180813073-e3430a0a-17a6-40ca-91a0-8c6354d7fb84.png)
 ## Remark
 The dependency packages include `survival`.
+
+## Reference
+Pagano, M., & Gauvreau, K. (2000). Principles of biostatistics. Australia: Duxbury. <br>
