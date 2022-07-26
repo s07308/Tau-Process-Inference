@@ -12,6 +12,8 @@ res.tau.process_func <- function(X, observed.time, delta, t.star) {
   legend("topright", legend = c("control", "treatment"), lty = c(2, 1))
   plot(t.star, tau.process, type = "b", main = "Tau process")
   abline(a = 0, b = 0, lty = 3)
+  
+  return(tau.process)
 }
 
 res.tau.hat_func <- function(X, observed.time, delta, t.star, alpha = 0.05) {
@@ -30,9 +32,15 @@ res.tau.hat_func <- function(X, observed.time, delta, t.star, alpha = 0.05) {
   ci.l <- tau.hat + qnorm(p = alpha / 2) * sqrt(var.est)
   ci.r <- tau.hat + qnorm(p = 1 - alpha / 2) * sqrt(var.est)
   
+  ## the proportion being compared
+  km.fit <- survfit(Surv(observed.time, delta) ~ X)
+  prop.compared <- 1 - prod(summary(km.fit, times = t.star)$surv)
+  
+  
   return(list(tau.hat = tau.hat,
               var.est = var.est,
-              ci = c(ci.l, ci.r)))
+              ci = c(ci.l, ci.r),
+              prop.compared = prop.compared))
 }
 
 res.tau.hat.est <- function(X, observed.time, delta, t.star) {
