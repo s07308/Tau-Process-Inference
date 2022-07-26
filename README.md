@@ -7,7 +7,7 @@ This function calculates the estimated local Kendall's tau process, between a bi
 `X`: a non-empty numeric vector of group indicators, coded as 0 or 1 <br>
 `observed.time`: a non-empty numeric vector of observed times <br>
 `delta`: the censoring indicator coded as 0 if censored; as 1 if failed <br>
-`t.star`: the specified time point <br>
+`t.star`: the specified time point (no greater than the minimum of the largest failure points in the two samples) <br>
 `alpha`: type I error, default 0.05 <br>
 
 #### Value
@@ -43,7 +43,7 @@ This function wraps the procedure to calculate the local Kendall's &tau; process
 `X`: a non-empty numeric vector of group indicators, coded as 0 or 1 <br>
 `observed.time`: a non-empty numeric vector of observed times <br>
 `delta`: the censoring indicator coded as 0 if censored; as 1 if failed <br>
-`t.star`: the vector of specified time points <br>
+`t.star`: the vector of specified time points (no greater than the minimum of the largest failure points in the two samples) <br>
 
 #### Value
 It returns a vector of the estimated local Kendall's &tau; process at the specified time points. Furthermore, it automatically draws two plots, where the two Kaplan-Meier curves are on the left and the estimated tau process is on the right. 
