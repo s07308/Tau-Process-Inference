@@ -69,3 +69,4 @@ The dependency packages include `survival`.
 
 ## Reference
 Pagano, M., & Gauvreau, K. (2000). Principles of biostatistics. Australia: Duxbury. <br>
+Tai, Y.C., Wang, W., & Wells, M.. (2022). Kendall's Tau for Two-Sample Inference Problems. https://arxiv.org/abs/2207.14445
