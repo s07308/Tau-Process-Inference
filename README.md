@@ -67,8 +67,24 @@ res.tau.process_func(X = cancer$group,
 [11]  0.145064589
 ```
 ![github_example_bladder](https://user-images.githubusercontent.com/9900943/180813073-e3430a0a-17a6-40ca-91a0-8c6354d7fb84.png)
+
+### imputed.tau.hat_func2()
+This function impute the concordane and discordance relationship within the provided interval. 
+
+#### Arguments
+`X`: a non-empty numeric vector of group indicators, coded as 0 or 1 <br>
+`observed.time`: a non-empty numeric vector of observed times <br>
+`delta`: the censoring indicator coded as 0 if censored; as 1 if failed <br>
+`t.min`: The left endpoint of the interval being imputed <br>
+`t.max`: The right endpoint of the interval being imputed <br>
+`dist.0`: the assumed distribution of group 0. ("exp", "weibull", "lnorm", "logis") <br>
+`dist.1`: the assumed distribution of group 1. ("exp", "weibull", "lnorm", "logis") <br>
+
+#### Value
+It returns the value of the imputed local Kendall's &tau; at `t.max`.
+
 ## Remark
-The dependency packages include `survival`.
+The dependency packages include `survival` and `parmsurvfit`.
 
 ## Reference
 1. Pagano, M., & Gauvreau, K. (2000). Principles of biostatistics. Australia: Duxbury. <br>
