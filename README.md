@@ -15,7 +15,10 @@ This function calculates the estimated local Kendall's tau process, between a bi
 A list containing the following components <br>
 `tau.hat`: the estimated value of the local Kendall’s &tau; process up to `t.star` <br>
 `var.est`:  the variance of the local Kendall’s &tau;<br>
-`ci`: the (1-alpha)*100% confidence interval of the local Kendall’s &tau;<br>
+`ci.random`: the (1-alpha)*100% confidence interval of the local Kendall’s &tau; under random assignment <br>
+`ci.fixed`: the (1-alpha)*100% confidence interval of the local Kendall’s &tau; under fixed assignment <br>
+`p.est`: p-value using the estimated variance <br>
+`p.0`: p-value using the null variance estimate <br>
 `prop.compared`: the proportion of the concordance/discordance relationships being calculated up to `t.star` <br>
 
 #### Example
